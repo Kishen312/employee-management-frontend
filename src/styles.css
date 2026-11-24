@@ -1,21 +1,139 @@
+
 * {
-  font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  background-color: #fff;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #263238;
+}
+
+header {
+    background: #173b65;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+    color: #dce8f5;
 }
 
 main {
-  margin: auto;
-  width: 50%;
-  padding: 20px;
+    width: 92%;
+    max-width: 1100px;
+    margin: 30px auto;
 }
 
-main > h1 {
-  text-align: center;
-  font-size: 3.5em;
+.form-section,
+.employee-section {
+    background: white;
+    padding: 24px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    margin-top: 0;
+    color: #173b65;
+}
+
+form {
+    display: grid;
+    gap: 12px;
+    max-width: 500px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid #75a9e8;
+    border-color: #2563eb;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    background: #1769aa;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 4px 3px 4px 0;
+}
+
+button:hover {
+    background: #104d80;
+}
+
+#cancel-button {
+    background: #64748b;
+}
+
+#message {
+    font-weight: bold;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th,
+td {
+    padding: 13px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+th {
+    background: #eaf1f8;
+    color: #173b65;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    .form-section,
+    .employee-section {
+        padding: 16px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
 }
