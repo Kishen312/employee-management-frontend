@@ -1,17 +1,70 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
+    <header>
+        <h1>Employee Management System</h1>
+        <p>Azure Three-Tier Architecture Project</p>
+    </header>
 
+    <main>
+        <section class="form-section">
+            <h2 id="form-title">Add New Employee</h2>
+
+            <form id="employee-form">
+                <input type="hidden" id="employee-id">
+
+                <label for="name">Employee Name</label>
+                <input type="text" id="name" required maxlength="100">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required maxlength="255">
+
+                <label for="department">Department</label>
+                <input type="text" id="department" required maxlength="100">
+
+                <button type="submit" id="save-button">Add Employee</button>
+                <button type="button" id="cancel-button" hidden>Cancel</button>
+            </form>
+
+            <p id="message" role="status"></p>
+        </section>
+
+        <section class="employee-section">
+            <h2>Employee Directory</h2>
+            <button type="button" id="refresh-button">Refresh Employees</button>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employee-list">
+                        <tr>
+                            <td colspan="5">Loading employees...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by Azure App Service and Azure SQL Database</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
 </html>
